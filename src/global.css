@@ -1,0 +1,8 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.vertical-text {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg); /* text readable banane ke liye */
+}
