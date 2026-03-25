@@ -6,3 +6,11 @@
   writing-mode: vertical-rl;
   transform: rotate(180deg); /* text readable banane ke liye */
 }
+@keyframes road {
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 40px;
+  }
+}

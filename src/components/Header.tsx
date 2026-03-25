@@ -60,6 +60,7 @@ export default function Header() {
             <Link to="/services">Services</Link>
             <Link to="/faq">FAQ</Link>
             <Link to="/contact">Contact</Link>
+            <Link to="/fun">Fun</Link>
           </nav>
 
           <button
@@ -96,6 +97,9 @@ export default function Header() {
         </Link>
         <Link to="/contact" onClick={() => setMenuOpen(false)}>
           Contact
+        </Link>
+        <Link to="/fun" onClick={() => setMenuOpen(false)}>
+          Fun
         </Link>
       </div>
     </>

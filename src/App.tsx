@@ -9,6 +9,7 @@ import FAQ from "./components/Faq";
 import Contact from "./pages/Contact";
 import ScrollToTop from "./components/ScrollToTop";
 import PageTitle from "./components/PageTitle";
+import FunZone from "./pages/FunZone";
 
 export default function App() {
   return (
@@ -24,6 +25,7 @@ export default function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/faq" element={<FAQ />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/fun" element={<FunZone />} />
         </Route>
       </Routes>
     </>
