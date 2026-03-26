@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 export default function TicTacToe() {
-  const [board, setBoard] = useState(Array(9).fill(null));
+  const [board, setBoard] = useState<(string | null)[]>(Array(9).fill(null));
   const [xTurn, setXTurn] = useState(true);
   const [score, setScore] = useState({ X: 0, O: 0 });
   const [isAI, setIsAI] = useState(true);
@@ -14,19 +14,22 @@ export default function TicTacToe() {
     if (isAI && !xTurn && !winner) {
       const empty = board
         .map((val, i) => (val === null ? i : null))
-        .filter((v) => v !== null);
+        .filter((v) => v !== null) as number[];
+
+      if (empty.length === 0) return;
 
       const randomMove = empty[Math.floor(Math.random() * empty.length)];
 
-      setTimeout(() => handleClick(randomMove as number), 500);
+      setTimeout(() => handleClick(randomMove), 400);
     }
-  }, [xTurn, board]);
+  }, [xTurn, board, isAI, winner]);
 
   function handleClick(i: number) {
     if (board[i] || winner) return;
 
     const newBoard = [...board];
     newBoard[i] = xTurn ? "X" : "O";
+
     setBoard(newBoard);
     setXTurn(!xTurn);
   }
@@ -69,7 +72,7 @@ export default function TicTacToe() {
       </div>
 
       <motion.p
-        key={winner || isDraw || xTurn}
+        key={`${winner}-${isDraw}-${xTurn}`}
         initial={{ opacity: 0, y: 10 }}
         animate={{ opacity: 1, y: 0 }}
         className="mt-4 text-sm text-gray-300"
@@ -103,7 +106,7 @@ export default function TicTacToe() {
   );
 }
 
-function calculateWinner(b: unknown[]) {
+function calculateWinner(b: (string | null)[]) {
   const lines = [
     [0, 1, 2],
     [3, 4, 5],
