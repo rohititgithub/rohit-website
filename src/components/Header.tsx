@@ -54,7 +54,9 @@ export default function Header() {
           </Link>
 
           <nav className="hidden md:flex gap-8 text-sm">
-            <Link to="/">Home</Link>
+            <Link to="/" onClick={() => window.scrollTo(0, 0)}>
+              Home
+            </Link>
             <Link to="/about">About</Link>
             <Link to="/projects">Projects</Link>
             <Link to="/services">Services</Link>
