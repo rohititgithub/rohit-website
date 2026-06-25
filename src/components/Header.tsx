@@ -57,10 +57,10 @@ export default function Header() {
             <Link to="/" onClick={() => window.scrollTo(0, 0)}>
               Home
             </Link>
-            <Link to="/about">About</Link>
+            {/* <Link to="/about">About</Link>
             <Link to="/projects">Projects</Link>
             <Link to="/services">Services</Link>
-            <Link to="/faq">FAQ</Link>
+            <Link to="/faq">FAQ</Link> */}
             <Link to="/contact">Contact</Link>
             <Link to="/fun">Fun</Link>
           </nav>
@@ -85,7 +85,7 @@ export default function Header() {
         <Link to="/" onClick={() => setMenuOpen(false)}>
           Home
         </Link>
-        <Link to="/about" onClick={() => setMenuOpen(false)}>
+        {/* <Link to="/about" onClick={() => setMenuOpen(false)}>
           About
         </Link>
         <Link to="/projects" onClick={() => setMenuOpen(false)}>
@@ -96,7 +96,7 @@ export default function Header() {
         </Link>
         <Link to="/faq" onClick={() => setMenuOpen(false)}>
           FAQ
-        </Link>
+        </Link> */}
         <Link to="/contact" onClick={() => setMenuOpen(false)}>
           Contact
         </Link>

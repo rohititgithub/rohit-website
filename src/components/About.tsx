@@ -10,13 +10,11 @@ export default function About() {
       viewport={{ once: true }}
       className="bg-[#f5f5f5] text-black py-16 sm:py-20 px-4 sm:px-6 md:px-16 relative overflow-hidden"
     >
-      {/* TOP BAR */}
       <div className="flex justify-between items-center text-[10px] sm:text-xs text-gray-500 mb-10 sm:mb-12">
         <p>01</p>
         <p>/INTRODUCTION</p>
       </div>
 
-      {/* ❌ HIDE ON MOBILE */}
       <div className="hidden sm:block absolute left-0 md:left-6 top-20 md:top-28">
         <h1 className="vertical-text text-[50px] md:text-[80px] font-bold text-gray-200/80 tracking-widest pointer-events-none">
           /about me
@@ -24,7 +22,6 @@ export default function About() {
       </div>
 
       <div className="max-w-5xl mx-auto">
-        {/* HEADING */}
         <motion.h2
           initial={{ opacity: 0, y: 60 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -39,7 +36,6 @@ export default function About() {
           clarity, and purpose.
         </motion.h2>
 
-        {/* GRID */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -47,7 +43,6 @@ export default function About() {
           transition={{ staggerChildren: 0.2 }}
           className="mt-10 sm:mt-12 grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-center"
         >
-          {/* IMAGE */}
           <div className="w-full overflow-hidden rounded-xl">
             <motion.img
               variants={{
@@ -60,7 +55,6 @@ export default function About() {
             />
           </div>
 
-          {/* TEXT */}
           <motion.p
             variants={{
               hidden: { opacity: 0, y: 40 },
@@ -88,7 +82,6 @@ export default function About() {
             </span>
           </motion.p>
 
-          {/* BUTTON */}
           <motion.div
             variants={{
               hidden: { opacity: 0, y: 40 },
@@ -113,7 +106,6 @@ export default function About() {
           </motion.div>
         </motion.div>
 
-        {/* SKILLS */}
         <div className="mt-12 sm:mt-16 overflow-hidden">
           <p className="text-[10px] sm:text-xs text-gray-500 mb-4 sm:mb-6">
             /SKILLS

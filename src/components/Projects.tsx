@@ -2,6 +2,12 @@ import { motion } from "framer-motion";
 
 const projects = [
   {
+    title: "College-Connect",
+    image: "/project4.png",
+    live: "https://your-live-site.com",
+    repo: "https://github.com/rohititgithub/college-connect.git",
+  },
+  {
     title: "Previous portfolio",
     image: "/project1.png",
     live: "https://rohit-myportfolio.netlify.app/",
@@ -13,12 +19,7 @@ const projects = [
     live: "https://your-live-site.com",
     repo: "https://github.com/rohititgithub/Fanta-Animation-web-page.git",
   },
-  {
-    title: "Something Big is Coming....",
-    image: "/project2.jpeg",
-    live: "https://your-live-site.com",
-    repo: "https://github.com/your-repo",
-  },
+
   {
     title: "Something Big is Coming....",
     image: "/project3.jpeg",
