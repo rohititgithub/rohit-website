@@ -11,7 +11,7 @@ The portfolio combines a clean editorial-style design with smooth animations, re
 🌐 Live Portfolio
 
 Visit the portfolio:
-"rohit-portfolio-tech.netlify.app"
+"https://rohit-portfolio-tech.netlify.app/"
 
 
 ---
